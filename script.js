@@ -896,6 +896,7 @@ let activeTarget =
 let toastTimer;
 
 
+
 function escapeHtml(value) {
 
   return String(value).replace(
@@ -912,6 +913,7 @@ function escapeHtml(value) {
 }
 
 
+
 function categoryLabel(id) {
 
   return (
@@ -922,6 +924,7 @@ function categoryLabel(id) {
   );
 
 }
+
 
 
 function commandsForCategory(categoryId) {
@@ -943,6 +946,7 @@ function commandsForCategory(categoryId) {
 }
 
 
+
 function resolveCommandTarget(command) {
 
   return command.replaceAll(
@@ -953,6 +957,7 @@ function resolveCommandTarget(command) {
 }
 
 
+
 function commandUsesTarget(item) {
 
   return item.commands.some(
@@ -961,6 +966,7 @@ function commandUsesTarget(item) {
   );
 
 }
+
 
 
 function getCommandBlockGiveCommand(settings) {
@@ -987,6 +993,7 @@ function getCommandBlockGiveCommand(settings) {
   return "/give @s minecraft:command_block 1";
 
 }
+
 
 
 /* =========================
@@ -1022,6 +1029,7 @@ function renderCategorySelect() {
     activeCategory;
 
 }
+
 
 
 /* =========================
@@ -1084,6 +1092,7 @@ function renderCommandSelect() {
   renderSelectedCommand();
 
 }
+
 
 
 /* =========================
@@ -1157,6 +1166,7 @@ function renderTargetSelector(item) {
 }
 
 
+
 /* =========================
    COMMAND
 ========================= */
@@ -1212,6 +1222,7 @@ function renderCommandLines(item) {
   `;
 
 }
+
 
 
 /* =========================
@@ -1284,6 +1295,7 @@ function renderInformationSettings(item) {
   `;
 
 }
+
 
 
 /* =========================
@@ -1399,6 +1411,7 @@ function renderCommandBlockSection(item) {
 }
 
 
+
 /* =========================
    COMMAND CARD
 ========================= */
@@ -1472,6 +1485,7 @@ function renderCommandCard(item) {
 }
 
 
+
 /* =========================
    SELECTED COMMAND
 ========================= */
@@ -1519,6 +1533,7 @@ function renderSelectedCommand() {
 }
 
 
+
 /* =========================
    TARGET
 ========================= */
@@ -1532,6 +1547,7 @@ function setActiveTarget(target) {
   renderSelectedCommand();
 
 }
+
 
 
 /* =========================
@@ -1649,6 +1665,7 @@ async function copyText(
 }
 
 
+
 /* =========================
    EVENTS
 ========================= */
@@ -1732,6 +1749,7 @@ document.addEventListener(
 );
 
 
+
 /* =========================
    LOGO
 ========================= */
@@ -1760,6 +1778,7 @@ officeLogo.addEventListener(
 
   }
 );
+
 
 
 /* =========================
