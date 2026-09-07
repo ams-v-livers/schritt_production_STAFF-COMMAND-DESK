@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ライバー事務所運営向け Minecraft Java Edition コマンド辞典" />
+
+  <title>Minecraft Command Desk | STAFF ONLY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <!-- =========================
+         左サイドバー
+    ========================== -->
+    <aside class="sidebar">
+
+      <a class="brand" href="#top" aria-label="トップへ戻る">
+
+        <span class="logo-frame">
+          <img
+            id="officeLogo"
+            src="assets/logo.png"
+            alt="事務所ロゴ"
+          >
+
+          <span
+            id="logoFallback"
+            class="logo-fallback"
+          >
+            LOGO
+          </span>
+        </span>
+
+        <span class="brand-copy">
+          <span class="brand-kicker">
+            STAFF COMMAND DESK
+          </span>
+
+          <strong>MINECRAFT</strong>
+        </span>
+
+      </a>
+
+
+      <div class="side-label">
+        HOW TO USE
+      </div>
+
+
+      <div class="side-guide">
+
+        <div>
+          <span>01</span>
+          <p>カテゴリを選択</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>使いたいコマンドを選択</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>コピーして実行</p>
+        </div>
+
+      </div>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="edition-card">
+
+          <span>EDITION</span>
+
+          <strong>
+            Java Edition
+          </strong>
+
+          <small>
+            Vanilla commands only
+          </small>
+
+        </div>
+
+        <p>
+          プラグイン専用コマンド・
+          ライバー向け友好MOB設定は
+          別サイト／別資料で管理。
+        </p>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         メイン
+    ========================== -->
+    <main
+      id="top"
+      class="main-content"
+    >
+
+
+      <!-- HERO -->
+      <header class="hero">
+
+        <div>
+
+          <p class="eyebrow">
+            OFFICE OPERATIONS / INTERNAL USE
+          </p>
+
+          <h1>
+            Minecraft
+            <br>
+            <span>Command Desk</span>
+          </h1>
+
+          <p class="hero-copy">
+            運営中に迷わない。
+            カテゴリと用途をプルダウンで選び、
+            そのままコピー。
+            コマンドブロック設定まで同じ画面で確認できます。
+          </p>
+
+        </div>
+
+
+        <div class="hero-side">
+
+          <span class="status-dot"></span>
+
+          <span>
+            STAFF ONLY
+          </span>
+
+        </div>
+
+      </header>
+
+
+
+      <!-- =========================
+           プルダウン
+      ========================== -->
+      <section
+        class="selector-panel"
+        aria-label="コマンド選択"
+      >
+
+        <div class="selector-panel-head">
+
+          <div>
+
+            <p class="eyebrow">
+              COMMAND SELECTOR
+            </p>
+
+            <h2>
+              使いたい内容を選択
+            </h2>
+
+          </div>
+
+
+          <span
+            id="resultMeta"
+            class="selector-meta"
+          >
+            SELECT & COPY
+          </span>
+
+        </div>
+
+
+
+        <div class="select-grid">
+
+
+          <!-- カテゴリ -->
+          <label class="select-field">
+
+            <span class="field-label">
+              <b>01</b>
+              カテゴリ
+            </span>
+
+            <span class="select-shell">
+
+              <select
+                id="categorySelect"
+                aria-label="カテゴリを選択"
+              ></select>
+
+            </span>
+
+          </label>
+
+
+
+          <!-- コマンド -->
+          <label class="select-field">
+
+            <span class="field-label">
+              <b>02</b>
+              コマンド
+            </span>
+
+            <span class="select-shell">
+
+              <select
+                id="commandSelect"
+                aria-label="コマンドを選択"
+              ></select>
+
+            </span>
+
+          </label>
+
+
+        </div>
+
+
+        <p class="selector-help">
+          カテゴリを変更すると、
+          右側のコマンド一覧も自動で切り替わります。
+        </p>
+
+      </section>
+
+
+
+      <!-- =========================
+           注意事項
+      ========================== -->
+      <section class="important-panel">
+
+        <div class="important-mark">
+          !
+        </div>
+
+        <div>
+
+          <strong>
+            コマンドブロックでは、
+            表示している先頭の「/」は外して使用できます。
+          </strong>
+
+          <p>
+            サーバーでコマンドブロックを使用する場合は
+            <code>server.properties</code>
+            の
+            <code>enable-command-block=true</code>
+            が必要です。
+            Minecraftのバージョン・権限・サーバー構成によって
+            一部挙動が異なる場合があります。
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           サバイバル安全設定
+      ========================== -->
+      <section
+        class="survival-highlight"
+        aria-labelledby="survivalTitle"
+      >
+
+        <div class="section-head">
+
+          <div>
+
+            <p class="eyebrow">
+              SURVIVAL SAFETY
+            </p>
+
+            <h2 id="survivalTitle">
+              サバイバルのまま
+              「ほぼ無敵 + 常時満腹」
+            </h2>
+
+          </div>
+
+
+          <span class="accent-badge">
+            運営おすすめ
+          </span>
+
+        </div>
+
+
+        <p class="lead">
+          ゲームモードを変更せず、
+          サバイバルの状態を維持したまま
+          通常プレイ中の死亡リスクを大幅に下げる設定です。
+          常時適用する場合はリピートコマンドブロックを使用します。
+        </p>
+
+
+        <div
+          class="preset-grid"
+          id="survivalPreset"
+        ></div>
+
+
+        <div class="preset-note">
+
+          <strong>
+            「絶対に死亡しない」について
+          </strong>
+
+          <p>
+            Vanilla環境では
+            <code>/kill</code>
+            や奈落などを含め、
+            あらゆる死亡要因を完全に無効化する
+            単一のゲームルールはありません。
+            ここでは通常の戦闘・爆発・落下・炎・空腹などによる
+            死亡を極力防ぐ構成を掲載しています。
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           セレクター早見
+      ========================== -->
+      <section
+        class="selector-strip"
+        aria-label="セレクター早見"
+      >
+
+        <div>
+          <span>@s</span>
+          <small>実行者</small>
+        </div>
+
+        <div>
+          <span>@p</span>
+          <small>最寄りのプレイヤー</small>
+        </div>
+
+        <div>
+          <span>@a</span>
+          <small>全プレイヤー</small>
+        </div>
+
+        <div>
+          <span>@r</span>
+          <small>ランダム1人</small>
+        </div>
+
+        <div>
+          <span>@e</span>
+          <small>全エンティティ</small>
+        </div>
+
+        <div>
+          <span>~ ~ ~</span>
+          <small>現在地基準</small>
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           選択したコマンド
+      ========================== -->
+      <section class="section-head command-section-head">
+
+        <div>
+
+          <p class="eyebrow">
+            SELECTED COMMAND
+          </p>
+
+          <h2>
+            選択したコマンド
+          </h2>
+
+        </div>
+
+
+        <div class="legend">
+
+          <span>
+            <i class="legend-dot safe"></i>
+            単発
+          </span>
+
+          <span>
+            <i class="legend-dot repeat"></i>
+            リピート
+          </span>
+
+          <span>
+            <i class="legend-dot caution"></i>
+            注意
+          </span>
+
+        </div>
+
+      </section>
+
+
+      <section
+        id="commandGrid"
+        class="command-grid single-view"
+        aria-live="polite"
+      ></section>
+
+
+
+      <!-- FOOTER -->
+      <footer>
+
+        <span>
+          Minecraft Command Desk /
+          Internal Staff Tool
+        </span>
+
+        <span>
+          Java Edition /
+          Vanilla Commands
+        </span>
+
+      </footer>
+
+
+    </main>
+
+  </div>
+
+
+
+  <!-- コピー通知 -->
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  >
+    コピーしました
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
