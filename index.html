@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ライバー事務所運営向け Minecraft Java Edition コマンドツール">
+  <meta name="description" content="運営向け Minecraft Java Edition コマンドツール">
+
   <title>Minecraft Command Desk | STAFF ONLY</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
   <div class="app-shell">
 
+    <!-- ========================================
+         SIDEBAR
+    ========================================= -->
+
     <aside class="sidebar">
 
-      <a class="brand" href="#top" aria-label="トップへ戻る">
+      <a
+        class="brand"
+        href="#top"
+        aria-label="トップへ戻る"
+      >
 
         <span class="logo-frame">
-          <img id="officeLogo" src="assets/logo.png" alt="事務所ロゴ">
-          <span id="logoFallback" class="logo-fallback">LOGO</span>
+
+          <img
+            id="officeLogo"
+            src="assets/logo.png"
+            alt="事務所ロゴ"
+          >
+
+          <span
+            id="logoFallback"
+            class="logo-fallback"
+          >
+            LOGO
+          </span>
+
         </span>
 
+
         <span class="brand-copy">
-          <span class="brand-kicker">STAFF COMMAND DESK</span>
-          <strong>MINECRAFT</strong>
+
+          <span class="brand-kicker">
+            STAFF COMMAND DESK
+          </span>
+
+          <strong>
+            MINECRAFT
+          </strong>
+
         </span>
 
       </a>
 
-      <div class="side-label">HOW TO USE</div>
+
+
+      <!-- HOW TO USE -->
+
+      <div class="side-label">
+        HOW TO USE
+      </div>
+
 
       <div class="side-guide">
 
@@ -59,36 +102,71 @@
 
       </div>
 
+
+
+      <!-- SIDEBAR BOTTOM -->
+
       <div class="sidebar-bottom">
 
         <div class="edition-card">
-          <span>EDITION</span>
-          <strong>Java Edition</strong>
-          <small>Vanilla Commands</small>
+
+          <span>
+            EDITION
+          </span>
+
+          <strong>
+            Java Edition
+          </strong>
+
+          <small>
+            Vanilla Commands
+          </small>
+
         </div>
+
 
         <div class="external-links">
 
-          <span class="external-title">RELATED TOOLS</span>
+          <span class="external-title">
+            RELATED TOOLS
+          </span>
 
-          <!-- 友好MOB設定サイトURLへ変更 -->
+
+          <!-- クリエイター向けコマンドツール -->
+
           <a
-            href="https://example.com/friendly-mob"
+            href="https://am21hy.github.io/schritt_production_command/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>ライバー向け友好MOB設定</span>
-            <b>↗</b>
+
+            <span>
+              クリエイター展開 コマンドツール
+            </span>
+
+            <b>
+              ↗
+            </b>
+
           </a>
 
-          <!-- プラグイン専用コマンドサイトURLへ変更 -->
+
+          <!-- Stream To Earn -->
+
           <a
-            href="https://example.com/plugin-command"
+            href="https://streamtoearn.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>プラグイン専用コマンド</span>
-            <b>↗</b>
+
+            <span>
+              Stream To Earn
+            </span>
+
+            <b>
+              ↗
+            </b>
+
           </a>
 
         </div>
@@ -98,91 +176,243 @@
     </aside>
 
 
-    <main id="top" class="main-content">
+
+    <!-- ========================================
+         MAIN
+    ========================================= -->
+
+    <main
+      id="top"
+      class="main-content"
+    >
+
+
+      <!-- ========================================
+           HERO
+      ========================================= -->
 
       <header class="hero">
 
         <div>
 
-          <p class="eyebrow">OFFICE OPERATIONS / INTERNAL USE</p>
+          <p class="eyebrow">
+            OFFICE OPERATIONS / INTERNAL USE
+          </p>
+
 
           <h1>
             Minecraft<br>
-            <span>Command Desk</span>
+            <span>
+              Command Desk
+            </span>
           </h1>
 
-          <p class="hero-copy">カテゴリと用途をプルダウンで選び、そのままコピー。<br>
-            コマンドブロック使用の場合は、設定まで同じ画面で確認できます。</p>
+
+          <p class="hero-copy">
+            カテゴリと用途をプルダウンで選び、そのままコピー。<br>
+            コマンドブロック使用の場合は、設定まで同じ画面で確認できます。
+          </p>
 
         </div>
 
+
         <div class="hero-side">
+
           <span class="status-dot"></span>
-          <span>STAFF ONLY</span>
+
+          <span>
+            STAFF ONLY
+          </span>
+
         </div>
 
       </header>
 
 
+
+      <!-- ========================================
+           COMMAND SELECTOR
+      ========================================= -->
+
       <section class="selector-panel">
+
 
         <div class="selector-panel-head">
 
           <div>
-            <p class="eyebrow">COMMAND SELECTOR</p>
-            <h2>使いたい内容を選択</h2>
+
+            <p class="eyebrow">
+              COMMAND SELECTOR
+            </p>
+
+            <h2>
+              使いたい内容を選択
+            </h2>
+
           </div>
 
-          <span id="resultMeta" class="selector-meta">
-            SELECT & COPY
+
+          <span
+            id="resultMeta"
+            class="selector-meta"
+          >
+            SELECT &amp; COPY
           </span>
 
         </div>
 
 
+
+        <!-- SELECT -->
+
         <div class="select-grid">
 
-          <label class="select-field">
 
-            <span class="field-label">
-              <b>01</b>
+          <!-- CATEGORY -->
+
+          <div class="select-field">
+
+            <label
+              class="field-label"
+              for="categorySelect"
+            >
+
+              <b>
+                01
+              </b>
+
               カテゴリ
-            </span>
 
-            <span class="select-shell">
+            </label>
+
+
+            <div class="select-shell">
+
               <select
                 id="categorySelect"
                 aria-label="カテゴリを選択"
-              ></select>
-            </span>
+              >
 
-          </label>
+                <!--
+                  JavaScript読み込み前でも
+                  空欄にならないための初期値
+                -->
+
+                <option value="survival">
+                  生存・安全
+                </option>
+
+                <option value="gamemode">
+                  ゲームモード
+                </option>
+
+                <option value="teleport">
+                  テレポート
+                </option>
+
+                <option value="world">
+                  ワールド管理
+                </option>
+
+                <option value="player">
+                  プレイヤー管理
+                </option>
+
+                <option value="commandblock">
+                  コマンドブロック
+                </option>
+
+                <option value="entity">
+                  MOB・エンティティ
+                </option>
+
+                <option value="utility">
+                  運営・便利
+                </option>
+
+              </select>
 
 
-          <label class="select-field">
+              <span
+                class="select-arrow"
+                aria-hidden="true"
+              >
+                ▼
+              </span>
 
-            <span class="field-label">
-              <b>02</b>
+            </div>
+
+          </div>
+
+
+
+          <!-- COMMAND -->
+
+          <div class="select-field">
+
+            <label
+              class="field-label"
+              for="commandSelect"
+            >
+
+              <b>
+                02
+              </b>
+
               用途・コマンド
-            </span>
 
-            <span class="select-shell">
+            </label>
+
+
+            <div class="select-shell">
+
               <select
                 id="commandSelect"
                 aria-label="用途・コマンドを選択"
-              ></select>
-            </span>
+              >
 
-          </label>
+                <!--
+                  JavaScript読み込み前の初期表示
+                -->
+
+                <option value="0">
+                  01｜通常ダメージでほぼ死亡しない
+                </option>
+
+              </select>
+
+
+              <span
+                class="select-arrow"
+                aria-hidden="true"
+              >
+                ▼
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
 
+
+        <!-- ========================================
+             SELECTED COMMAND
+        ========================================= -->
+
         <div class="selected-command-title">
 
           <div>
-            <p class="eyebrow">SELECTED COMMAND</p>
-            <h2>選択したコマンド</h2>
+
+            <p class="eyebrow">
+              SELECTED COMMAND
+            </p>
+
+            <h2>
+              選択したコマンド
+            </h2>
+
           </div>
 
         </div>
@@ -197,6 +427,11 @@
       </section>
 
 
+
+      <!-- ========================================
+           TARGET INFO
+      ========================================= -->
+
       <section class="target-information">
 
         <p>
@@ -208,15 +443,24 @@
       </section>
 
 
+
+      <!-- ========================================
+           COMMAND BLOCK INFO
+      ========================================= -->
+
       <section class="important-panel">
 
-        <div class="important-mark">!</div>
+        <div class="important-mark">
+          !
+        </div>
+
 
         <div>
 
           <strong>
             コマンドブロック内では、コマンド先頭の「/」を外して入力できます。
           </strong>
+
 
           <p>
             サーバーでコマンドブロックを使用する場合は <code>server.properties</code> の <code>enable-command-block=true</code> が必要です。Minecraftのバージョンやサーバー構成によって一部挙動が異なる場合があります。
@@ -227,11 +471,17 @@
       </section>
 
 
+
+      <!-- ========================================
+           SURVIVAL NOTE
+      ========================================= -->
+
       <section class="survival-note">
 
         <strong>
           完全な「絶対に死亡しない」について
         </strong>
+
 
         <p>
           Vanilla環境では <code>/kill</code> や奈落などを含む、すべての死亡要因を1つのゲームルールだけで完全に無効化する設定はありません。このサイトでは通常の戦闘・爆発・炎・落下・空腹などによる死亡を極力防ぐ構成を掲載しています。
@@ -239,6 +489,11 @@
 
       </section>
 
+
+
+      <!-- ========================================
+           FOOTER
+      ========================================= -->
 
       <footer>
 
@@ -257,6 +512,11 @@
   </div>
 
 
+
+  <!-- ========================================
+       COPY TOAST
+  ========================================= -->
+
   <div
     id="toast"
     class="toast"
@@ -266,8 +526,6 @@
     コピーしました
   </div>
 
-
-  <script src="script.js"></script>
-
 </body>
+
 </html>
