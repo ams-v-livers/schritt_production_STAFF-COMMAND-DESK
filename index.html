@@ -3,36 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ライバー事務所運営向け Minecraft Java Edition コマンドツール">
+  <meta name="description" content="事務所運営向け Minecraft Java Edition コマンドツール">
   <title>Minecraft Command Desk | STAFF ONLY</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <div class="app-shell">
+
     <aside class="sidebar">
+
       <a class="brand" href="#top" aria-label="トップへ戻る">
+
         <span class="logo-frame">
           <img id="officeLogo" src="assets/logo.png" alt="事務所ロゴ">
           <span id="logoFallback" class="logo-fallback">LOGO</span>
         </span>
+
         <span class="brand-copy">
           <span class="brand-kicker">STAFF COMMAND DESK</span>
           <strong>MINECRAFT</strong>
         </span>
+
       </a>
 
       <div class="side-label">HOW TO USE</div>
+
       <div class="side-guide">
-        <div><span>01</span><p>カテゴリを選択</p></div>
-        <div><span>02</span><p>用途を選択</p></div>
-        <div><span>03</span><p>対象を確認・変更</p></div>
-        <div><span>04</span><p>コマンドをコピー</p></div>
+
+        <div>
+          <span>01</span>
+          <p>カテゴリーを選択</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>用途を選択</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>必要に応じて対象変更</p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <p>コマンドをコピー</p>
+        </div>
+
       </div>
 
       <div class="sidebar-bottom">
+
         <div class="edition-card">
           <span>EDITION</span>
           <strong>Java Edition</strong>
@@ -40,139 +68,203 @@
         </div>
 
         <div class="external-links">
+
           <span class="external-title">RELATED TOOLS</span>
 
-          <!-- ↓ hrefを友好MOB設定サイトのURLへ変更 -->
-          <a href="https://example.com/friendly-mob" target="_blank" rel="noopener noreferrer">
-            <span class="external-link-text">ライバー向け友好MOB設定</span>
-            <span class="external-arrow">↗</span>
+          <a
+            href="https://am21hy.github.io/schritt_production_command/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>クリエイター向け コマンドツール</span>
+            <b>↗</b>
           </a>
 
-          <!-- ↓ hrefをプラグイン専用コマンドサイトのURLへ変更 -->
-          <a href="https://example.com/plugin-command" target="_blank" rel="noopener noreferrer">
-            <span class="external-link-text">プラグイン専用コマンド</span>
-            <span class="external-arrow">↗</span>
+          <a
+            href="https://streamtoearn.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>steam to earn</span>
+            <b>↗</b>
           </a>
+
         </div>
+
       </div>
+
     </aside>
 
+
     <main id="top" class="main-content">
+
       <header class="hero">
+
         <div>
+
           <p class="eyebrow">OFFICE OPERATIONS / INTERNAL USE</p>
-          <h1>Minecraft<br><span>Command Desk</span></h1>
-          <p class="hero-copy">カテゴリと用途をプルダウンで選び、そのままコピー。コマンドブロック使用の場合は、設定まで同じ画面で確認できます。</p>
+
+          <h1>
+            Minecraft<br>
+            <span>Command Desk</span>
+          </h1>
+
+          <p class="hero-copy">カテゴリーと用途をプルダウンで選び、そのままコピー。コマンドブロック使用の場合は、設定まで同じ画面で確認できます。</p>
+
         </div>
-        <div class="hero-side"><span class="status-dot"></span><span>STAFF ONLY</span></div>
+
+        <div class="hero-side">
+          <span class="status-dot"></span>
+          <span>STAFF ONLY</span>
+        </div>
+
       </header>
 
-      <section class="selector-panel" aria-label="コマンド選択">
+
+      <section class="selector-panel">
+
         <div class="selector-panel-head">
+
           <div>
             <p class="eyebrow">COMMAND SELECTOR</p>
             <h2>使いたい内容を選択</h2>
           </div>
-          <span id="resultMeta" class="selector-meta">SELECT & COPY</span>
+
+          <span id="resultMeta" class="selector-meta">
+            SELECT & COPY
+          </span>
+
         </div>
+
 
         <div class="select-grid">
-          <label class="select-field">
-            <span class="field-label"><b>01</b>カテゴリ</span>
-            <span class="select-shell">
-              <select id="categorySelect" aria-label="カテゴリを選択"></select>
-            </span>
-          </label>
 
           <label class="select-field">
-            <span class="field-label"><b>02</b>用途・コマンド</span>
-            <span class="select-shell">
-              <select id="commandSelect" aria-label="コマンドを選択"></select>
+
+            <span class="field-label">
+              <b>01</b>
+              カテゴリ
             </span>
+
+            <span class="select-shell">
+              <select
+                id="categorySelect"
+                aria-label="カテゴリを選択"
+              ></select>
+            </span>
+
           </label>
+
+
+          <label class="select-field">
+
+            <span class="field-label">
+              <b>02</b>
+              用途・コマンド
+            </span>
+
+            <span class="select-shell">
+              <select
+                id="commandSelect"
+                aria-label="用途・コマンドを選択"
+              ></select>
+            </span>
+
+          </label>
+
         </div>
-      </section>
 
-      <section class="target-selector">
-        <div class="target-selector-head">
+
+        <div class="selected-command-title">
+
           <div>
-            <p class="eyebrow">TARGET SELECTOR</p>
-            <h2>実行対象</h2>
+            <p class="eyebrow">SELECTED COMMAND</p>
+            <h2>選択したコマンド</h2>
           </div>
-          <span class="current-target">現在：<strong id="currentTargetLabel">@s</strong></span>
+
         </div>
 
-        <div class="target-buttons">
-          <button type="button" class="target-btn active" data-target="@s"><span>@s</span><small>実行者</small></button>
-          <button type="button" class="target-btn" data-target="@p"><span>@p</span><small>最寄りのプレイヤー</small></button>
-          <button type="button" class="target-btn" data-target="@a"><span>@a</span><small>全プレイヤー</small></button>
-          <button type="button" class="target-btn" data-target="@r"><span>@r</span><small>ランダム1人</small></button>
-          <button type="button" class="target-btn" data-target="@e"><span>@e</span><small>全エンティティ</small></button>
-        </div>
 
-        <div class="custom-target">
-          <label for="customTargetInput">プレイヤー名を直接指定</label>
-          <div class="custom-target-row">
-            <input id="customTargetInput" type="text" autocomplete="off" placeholder="Minecraft IDを入力">
-            <button id="applyCustomTarget" type="button">適用</button>
-            <button id="resetTarget" class="secondary-btn" type="button">@sに戻す</button>
-          </div>
-        </div>
+        <div
+          id="commandGrid"
+          class="command-grid"
+          aria-live="polite"
+        ></div>
 
-        <p class="target-note">初期値は <code>@s</code>（実行者）です。チャットから実行する場合は自分自身を意味します。コマンドブロック内では <code>@s</code> がプレイヤーを意味しないため、プレイヤーへ実行する場合は <code>@p</code>・<code>@a</code>・プレイヤー名などへ変更してください。</p>
       </section>
+
+
+      <section class="target-information">
+
+        <p>
+          初期値は <code>@s</code>（実行者）です。<br>
+          チャットから実行する場合は自分自身を意味します。<br>
+          コマンドブロック内では <code>@s</code> がプレイヤーを意味しないため、プレイヤーへ実行する場合は <code>@p</code>・<code>@a</code>・プレイヤー名などへ変更してください。
+        </p>
+
+      </section>
+
 
       <section class="important-panel">
+
         <div class="important-mark">!</div>
+
         <div>
-          <strong>コマンドブロック内では、コマンド先頭の「/」を外して入力できます。</strong>
-          <p>サーバーでコマンドブロックを使用する場合は <code>server.properties</code> の <code>enable-command-block=true</code> が必要です。Minecraftのバージョンやサーバー構成によって一部挙動が異なる場合があります。</p>
+
+          <strong>
+            コマンドブロック内では、コマンド先頭の「/」を外して入力できます。
+          </strong>
+
+          <p>
+            サーバーでコマンドブロックを使用する場合は <code>server.properties</code> の <code>enable-command-block=true</code> が必要です。Minecraftのバージョンやサーバー構成によって一部挙動が異なる場合があります。
+          </p>
+
         </div>
+
       </section>
 
-      <section class="survival-highlight" aria-labelledby="survivalTitle">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">SURVIVAL SAFETY</p>
-            <h2 id="survivalTitle">サバイバルのまま「ほぼ無敵 + 常時満腹」</h2>
-          </div>
-          <span class="accent-badge">運営おすすめ</span>
-        </div>
 
-        <p class="lead">ゲームモードを変更せず、サバイバルの状態を維持したまま通常プレイ中の死亡リスクを大幅に下げる設定です。対象は上の「実行対象」から変更できます。</p>
+      <section class="survival-note">
 
-        <div id="survivalPreset" class="preset-grid"></div>
+        <strong>
+          サバイバルモードで「絶対に死亡しない」使用について
+        </strong>
 
-        <div class="preset-note">
-          <strong>完全な「絶対に死亡しない」について</strong>
-          <p>Vanilla環境では <code>/kill</code> や奈落などを含む、すべての死亡要因を1つのゲームルールだけで完全に無効化する設定はありません。このサイトでは通常の戦闘・爆発・炎・落下・空腹などによる死亡を極力防ぐ構成を掲載しています。</p>
-        </div>
+        <p>
+          Vanilla環境では <code>/kill</code> や奈落などを含む、すべての死亡要因を1つのゲームルールだけで完全に無効化する設定はありません。このサイトでは通常の戦闘・爆発・炎・落下・空腹などによる死亡を極力防ぐ構成を掲載しています。
+        </p>
+
       </section>
 
-      <section class="section-head command-section-head">
-        <div>
-          <p class="eyebrow">SELECTED COMMAND</p>
-          <h2>選択したコマンド</h2>
-        </div>
-
-        <div class="legend">
-          <span><i class="legend-dot safe"></i>単発</span>
-          <span><i class="legend-dot repeat"></i>リピート</span>
-          <span><i class="legend-dot caution"></i>注意</span>
-        </div>
-      </section>
-
-      <section id="commandGrid" class="command-grid single-view" aria-live="polite"></section>
 
       <footer>
-        <span>Minecraft Command Desk / Internal Staff Tool</span>
-        <span>Java Edition / Vanilla Commands</span>
+
+        <span>
+          Minecraft Command Desk / Internal Staff Tool
+        </span>
+
+        <span>
+          Java Edition / Vanilla Commands
+        </span>
+
       </footer>
+
     </main>
+
   </div>
 
-  <div id="toast" class="toast" role="status" aria-live="polite">コピーしました</div>
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  >
+    コピーしました
+  </div>
+
 
   <script src="script.js"></script>
+
 </body>
 </html>
